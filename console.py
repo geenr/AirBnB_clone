@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Represents a class HBNBcommand which is used to access the console
+Represents the class HBNBcommand which is used to access the console.
 """
 import cmd
 import json
@@ -16,7 +16,7 @@ from models.review import Review
 
 class HBNBcommand(cmd.Cmd):
     """
-    Initialize a class HBNBcommand
+    Initializes the class HBNBcommand
     """
     intro = "hey welcome to my cmd"
     prompt = "(hbnb) "
@@ -34,7 +34,7 @@ class HBNBcommand(cmd.Cmd):
         pass
 
     def do_quit(self, line):
-        """Quit command to exit the program"""
+        """Quits command to exit the program"""
         return True
 
     def do_EOF(self, line):
@@ -62,7 +62,7 @@ class HBNBcommand(cmd.Cmd):
                 print("** no instance found **")
 
     def do_create(self, line):
-        """Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id"""
+        """Create a new instance of BaseModel, saves it (to the JSON file) and prints the id"""
         base_model = BaseModel()
         
         in_put = line.split()
